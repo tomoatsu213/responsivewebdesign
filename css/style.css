@@ -496,38 +496,49 @@ body {
 /*------------------------*/
 /*         header         */
 /*------------------------*/
+.header-logo{
+  margin-left: 10px;
+}
+
 .header-nav li {
   display:none;
 }
-.menu,
-.menu span {
-  display: inline-block; /* spanタグはinline要素なのでblock要素を加える */
+#hamburger {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  top: 15px;
+  right: 20px;
+  transition: 0.4s;
 }
 
-.line-top,
-.line-middle,
-.line-bottom {
-  position: absolute; /* 親要素（.menu）の位置にしたがって上下左右位置指定 */
-  margin-top:20px;
-  margin-left:85%;
+#hamburger span {
+  position: absolute;
+  left: 2px;
+  display: block;
   width: 35px;
-  height: 4px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 4px;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.8s;
 }
 
-.line-top {
-  top: 0; /* relativeを当てた要素の上から0px */
+#hamburger span:nth-of-type(1) {
+  top: 10px; /* ハンバーガーメニューの1本目の棒 */
 }
 
-.line-middle {
-  top: 10px; /* relativeを当てた要素の上から10px */
+#hamburger span:nth-of-type(2) {
+  top: 20px; /* ハンバーガーメニューの2本目の棒 */
 }
 
-.line-bottom {
-  top: 20px; /* relativeを当てた要素の上から20px */
+#hamburger span:nth-of-type(3) {
+  top: 30px; /* ハンバーガーメニューの3本目の棒 */
 }
 
+.header-nav {
+  display: none; /* デスクトップのナビを消す */
+}
 .catchcopy {
   top: 40%;
   text-align:center;
@@ -600,16 +611,21 @@ body {
 /*------------------------*/
 .faq-title {
   font-size:30px;
+  vertical-align: middle;
+}
+
+.faq-title-jp {
+  vertical-align: middle;
 }
 
 /*------------------------*/
 /*        contact         */
 /*------------------------*/
-.flex{
+footer .flex{
   display:block;
 }
 
-.flex h1{
+.footer-bar h1{
   margin:0 auto;
 }
 }
